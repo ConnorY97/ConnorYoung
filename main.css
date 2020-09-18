@@ -8,10 +8,6 @@ body {
     margin: 0%;
 }
 
-body::-webkit-scrollbar {
-    display: none;
-}
-
 .Title {
     text-align: center;
 }
@@ -75,8 +71,6 @@ body::-webkit-scrollbar {
     height: 400px;
     width: 400px;
 }
-
-/*Attempt to fix*/
 
 
 

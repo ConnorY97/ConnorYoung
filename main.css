@@ -1,0 +1,76 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    color: #777;
+}
+
+.Body {
+    margin: 2em;
+}
+
+.Title {
+    text-align: center;
+}
+
+.Title-main {
+    margin-bottom: 0%;
+}
+
+.Title-sub {
+    margin-top: 0%;
+    padding-top: 0%;
+}
+
+.About {
+    border: 2px solid black;
+}
+
+.Portfolio {
+    border: 2px solid black;
+}
+
+.Group-title {
+    text-align: center;
+}
+
+.Group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Portfolio .Group {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.Content-title {
+    padding: 0;
+    margin: 0;
+}
+
+.Content {
+    max-width: 40%;
+}
+
+.Content-text {
+    padding: 0;
+    margin: 0;
+}
+
+.Paragraph p {
+    padding: 0;
+    margin: 0;
+}
+
+
+.Face {
+    height: 400px;
+}
+
+
+
+
+
+
+
+

@@ -1,6 +1,7 @@
+/*
 * {
     font-family: 'Roboto', sans-serif;
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(51, 49, 49);
     color: white;
 }
 
@@ -14,10 +15,6 @@ body::-webkit-scrollbar {
 
 .Title {
     text-align: center;
-}
-
-.Heading {
-    border: 2px solid black;
 }
 
 .Title-main {
@@ -79,6 +76,7 @@ body::-webkit-scrollbar {
     height: 400px;
     width: 400px;
 }
+*/ 
 
 
 

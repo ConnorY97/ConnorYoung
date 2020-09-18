@@ -3,8 +3,8 @@
     color: #777;
 }
 
-.Body {
-    margin: 2em;
+body {
+    margin: 0%;
 }
 
 .Title {
@@ -22,6 +22,9 @@
 
 .Group-title {
     text-align: center;
+    background-color: rgba(119, 119, 119, 0.521);
+    margin-left: 0%;
+    margin-right: 0%;
 }
 
 .Group {
@@ -38,6 +41,7 @@
 .Content-title {
     padding: 0;
     margin: 0;
+    margin-left: 2%;
 }
 
 .Content {
@@ -47,6 +51,7 @@
 .Content-text {
     padding: 0;
     margin: 0;
+    margin-left: 2%;
 }
 
 .Paragraph p {

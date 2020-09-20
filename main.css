@@ -1,15 +1,20 @@
 * {
     font-family: 'Roboto', sans-serif;
-    background-color: rgb(51, 49, 49);
-    color: white;
+
+    color: black;
 }
 
 body {
     margin: 0%;
 }
 
+.Heading {
+    background-image: url("codepic.jpg");
+}
+
 .Title {
-    text-align: center;
+    text-align: center;    
+    color: red;
 }
 
 .Title-main {
@@ -19,6 +24,28 @@ body {
 .Title-sub {
     margin-top: 0%;
     padding-top: 0%;
+}
+
+.Main-nav {
+    text-align: center;
+}
+
+.Main-nav ul {
+    padding-left: 0%;
+    padding-right: 0%;    
+}
+
+.Main-nav li {
+    display: inline;
+}
+
+.Main-nav a {
+    text-decoration: none;
+    padding: .5em;
+}
+
+.Main-nav a:hover {
+    color: rgb(128, 124, 124);
 }
 
 .About h2 {

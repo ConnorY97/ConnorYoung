@@ -9,15 +9,14 @@ body {
 }
 
 .Heading {
-    background-image: url("codepic.jpg");
 }
 
 .Title {
     text-align: center;    
-    color: red;
 }
 
 .Title-main {
+    margin-top: 0%;
     margin-bottom: 0%;
 }
 
@@ -97,6 +96,17 @@ body {
 .Picture {
     height: 400px;
     width: 400px;
+}
+
+.Email {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Email input {
+    width: 25%;
+    margin: 0.5%;
 }
 
 

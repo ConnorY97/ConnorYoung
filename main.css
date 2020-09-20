@@ -9,10 +9,15 @@ body {
 }
 
 .Heading {
+    background-color: rgba(0, 0, 0, .7);
+    background-image: url("codepic.jpg");
+    background-blend-mode: multiply;
+    background-size: cover;
 }
 
 .Title {
-    text-align: center;    
+    text-align: center;   
+    color: white; 
 }
 
 .Title-main {
@@ -40,6 +45,7 @@ body {
 
 .Main-nav a {
     text-decoration: none;
+    color: white;
     padding: .5em;
 }
 

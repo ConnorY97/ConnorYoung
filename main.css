@@ -9,10 +9,36 @@ body {
 }
 
 .Heading {
-    background-color: rgba(0, 0, 0, .7);
+    background-color: rgba(0, 0, 0, .5);
     background-image: url("codepic.jpg");
     background-blend-mode: multiply;
     background-size: cover;
+}
+
+footer {
+    background-color: rgb(125, 224, 241);  
+    margin-top: 2%;
+}
+
+footer ul {
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 0em;
+    padding-bottom: 0.5%;
+}
+
+footer li {
+    list-style-type: none;
+}
+
+footer .Group-title {    
+    margin-top: 0%;
+    padding-top: 0.5%;
+    color: black;
+}
+
+.List-element {
+    color: black;
 }
 
 .Title {
@@ -53,13 +79,22 @@ body {
     color: rgb(128, 124, 124);
 }
 
+.About {
+    padding-left: 2%;
+    padding-right: 2%; 
+}
+
+.Portfolio {
+    padding-left: 2%;
+    padding-right: 2%; 
+}
+
 .About h2 {
     margin-top: 0%;
 }
 
 .Group-title {
     text-align: center;
-    background-color: rgb(255, 255, 255);
     color: black;
     margin-left: 0%;
     margin-right: 0%;
@@ -69,7 +104,6 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border: 2px solid white;
 }
 
 .Portfolio .Group {

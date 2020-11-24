@@ -13,6 +13,8 @@ body {
     background-image: url("codepic.jpg");
     background-blend-mode: multiply;
     background-size: cover;
+    padding-bottom: 0.25%;
+    padding-top: 1%;
 }
 
 footer {
@@ -83,6 +85,10 @@ footer .Group-title {
     padding-right: 2%; 
 }
 
+.About .Content-text {
+    font-size: 150%;
+}
+
 .Portfolio {
     padding-left: 2%;
     padding-right: 2%; 
@@ -133,8 +139,9 @@ footer .Group-title {
 
 
 .Picture {
-    height: 400px;
-    width: 400px;
+    width: 25%;
+    height: 25%;
+    padding-right: 15%;
 }
 
 .Email {

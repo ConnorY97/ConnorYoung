@@ -138,10 +138,15 @@ footer .Group-title {
 }
 
 
-.Picture {
+.About .Picture {
     width: 25%;
     height: 25%;
     padding-right: 15%;
+}
+
+.Portfolio .Picture {
+    width: 31%;
+    height: 31%;
 }
 
 .Email {

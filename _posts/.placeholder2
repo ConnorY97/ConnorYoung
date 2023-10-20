@@ -1,9 +1,9 @@
 ---
-# the default layout is 'page'
-icon: fas fa-info-circle
-order: 4
+title: About Me
+date: 0001-01-01 12:00:00 
 ---
 
+# About me
 I am an avid game lover, passionate about pursuing a career in programming.
 
 ## Experience:

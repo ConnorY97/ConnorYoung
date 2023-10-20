@@ -7,6 +7,6 @@ order: 4
 I am an avid game lover, passionate about pursuing a career in programming.
 
 ## Experience:
-- Completed a Diploma and Advanced of Professional Game Development at the Academy of Entertainment.
-- Spent a year and a half working at an Indie studio Tumbleweed Games as the Technical Director.
-- Currntly work as a Support Engineer as FMOD for the last year.
+- Completed a Diploma and Advanced of Professional Game Development at the Academy of Entertainment
+- Technical Director for 1.5 years at Tumbleweed Games
+- Currently a Support Engineer at FMOD as of July 2022

@@ -1,6 +1,9 @@
 ---
 Title: Ghetto Lizard Brawl
 date: 2020-05-20 12:00:00
+image:
+    path: /assets/GLB.png
+    alt: Ghetto Lizard Brawl
 ---
 ## Description
 - Genre: Single player, brawler

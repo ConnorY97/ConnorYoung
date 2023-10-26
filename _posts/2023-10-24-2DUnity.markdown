@@ -1,0 +1,17 @@
+---
+Title: 2D Unity
+date: 2023-10-24 12:00:00
+---
+Practicing different forms of AI in a 2D Unity Environment.
+
+This started with [Conway's Game of Life](https://blog.yarsalabs.com/conways-game-of-life-in-unity/) and now working on a [Boids](https://en.wikipedia.org/wiki/Boids) algorithm from old Uni exercises.
+
+Conway's is currently working, though it does start to throttle after adding 150 x 150 tiles.
+
+I have just implemented the fleeing behavior for the Boids. The hope is to either add some fishy sprites and put them in some sort of fish tank.
+
+Finally, I will work on an A* algorithm to recreate the hedge maze from The Legend of Zelda: Ocarina of Time.
+
+Lots to do.
+
+[GitHub](https://github.com/ConnorY97/2DUnity.git)

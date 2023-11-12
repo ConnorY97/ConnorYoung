@@ -12,6 +12,6 @@ I have just implemented the fleeing behavior for the Boids. The hope is to eithe
 
 Finally, I will work on an A* algorithm to recreate the hedge maze from The Legend of Zelda: Ocarina of Time.
 
-Lots to do. Testing Change
+Lots to do.
 
 [GitHub](https://github.com/ConnorY97/2DUnity.git)

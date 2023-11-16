@@ -12,6 +12,16 @@ I have just implemented the fleeing behavior for the Boids. The hope is to eithe
 
 Finally, I will work on an A* algorithm to recreate the hedge maze from The Legend of Zelda: Ocarina of Time.
 
-Lots to do. Testing webhooks! New test
+Lots to do.
 
 [GitHub](https://github.com/ConnorY97/2DUnity.git)
+
+|Commits|Message|
+|-------|-------|
+|[01](https://github.com/ConnorY97/2DUnity/commit/e9df9ac85b1f324b20febeed68317ca41b18c42d)|Unity initial upload <br/> A testing project for 2D coding <br/>Implemented: Conways Game of life <br/>Working on: Boids <br/>Want to do: A*|
+|[02](https://github.com/ConnorY97/2DUnity/commit/c3d40d8aad6795ac9d2b2f55387f89a98e4dd2a0)|Cleaning up the repo|
+|[03](https://github.com/ConnorY97/2DUnity/commit/a86175904e7ae0df9c031f2b9453f3aa24e21867)|It seems to work? <br/>Good progress|
+|[04](https://github.com/ConnorY97/2DUnity/commit/6443394f0745d35c4e9da12c513bc4f2c99f108a)|Currently working on fleeing from multiple obstacles|
+|[05](https://github.com/ConnorY97/2DUnity/commit/2cac0dde1c16134ed540157e70dc93353041bac1)|Code clean up and basic flee behaviour|
+|[06](https://github.com/ConnorY97/2DUnity/commit/f97cd0f42bad0c4ada4684837a41112165bef55d)|Fixed the fleeing behavior. <br/>Issue: Not correctly updating the closest obstacle so the flee behavior looked like it was working but it was completely broken.<br/>Also implemented very janky player movement|
+|[07](https://github.com/ConnorY97/2DUnity/commit/b01d7293124ca0b70aabdfbc117d3202617e4f85)|Lots of clean up.<br/>Realized I should not be using a global var from the Game Manager for the weights of each of the behaviors. Rather I could make it a member var of the base class and require all inheritors to use it in their constructors. This also Allows for better testing of weights in editor without having to open the code.<br/>Started work on the separation behavior which is making everything freak out

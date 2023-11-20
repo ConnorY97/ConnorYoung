@@ -1,6 +1,7 @@
 ---
 Title: Ghetto Lizard Brawl
 date: 2020-05-20 12:00:00
+tags: [Portfolio]
 image:
     path: /assets/img/GLB.png
     alt: Ghetto Lizard Brawl

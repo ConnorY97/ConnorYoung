@@ -8,7 +8,7 @@ I am passionate about playing and making video games. Currently pursuing a caree
 
 ## Education
 - Completed a Diploma and Advanced Diploma of Professional Game Development at the [Academy of Entertainment](https://aie.edu.au/) (2019 - 2020)
-- Completed year 12 at Balwyn North High school (2015)
+- Completed Year 12 at Balwyn North High School (2015)
 
 ## Experience:
 - Technical Director at [Tumbleweed Games](https://tumbleweedgames.com/) (Jan 2021 - May 2022)

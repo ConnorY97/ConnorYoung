@@ -1,7 +1,7 @@
 ---
 Title: GitHub Actions
 date: 2023-06-12 7:15:19
-categories: [Learning]
+categories: [Learning, Devops]
 ---
 GitHub provides a powerful CI tool in the form of actions. This are process you can define to do a range of things!
 

@@ -20,7 +20,6 @@ Lots to do.
 
 [GitHub](https://github.com/ConnorY97/2DUnity.git)
 
-<details><summary>Commit History</summary>
 |Commits|Message|
 |-------|-------|
 |[00](https://github.com/ConnorY97/2DUnity/commit/b6c554c7516ab72d8a31b61eda641cc4079f5bf6)|Unity initial upload<br/>A testing project for 2D coding<br/>Implemented<br/>Conways Game of life<br/>Working on<br/>Boids<br/>Want to do<br/>A*|
@@ -33,4 +32,3 @@ Lots to do.
 |[07](https://github.com/ConnorY97/2DUnity/commit/d7f0f4e3fd0cb6986b53a7713bb509c7de07ddac)|Added UpdateWeight function which allows for changing weight values during runtime for better behavior control and testing|
 |[08](https://github.com/ConnorY97/2DUnity/commit/b3a46229f708b78f9e038b601bc01ff7bd0800fb)|Split the Game Manager into Boids and Conways managers so that I don't have to comment them out when I wanna swap. <br/>Looking into moving obstibles away from being boids and rather attached to GameObjects. This would allow for more interesting shapes to be used for the seekers to avoid.|
 |[09](https://github.com/ConnorY97/2DUnity/commit/e9df9ac85b1f324b20febeed68317ca41b18c42d)|Alignment<br/>Implementation of alignment|
-</details>

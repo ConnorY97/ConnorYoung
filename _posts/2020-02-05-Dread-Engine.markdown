@@ -7,7 +7,7 @@ categories: [Portfolio, CPP]
 My first attempt at creating a custom renderer. It is an OpenGL based renderer with simple OBJ loading and 2 set lighting sources.
 
 [Github](https://github.com/ConnorY97/DreadEngine)
-<details><summary>Commit History</summary>
+
 |Commit|Message|
 |------|-------|
 |[00](https://github.com/ConnorY97/DreadEngine/commit/7edda2e53a7e3459b78af3b92127d4d8c86585d0)|Initial commit|
@@ -38,7 +38,7 @@ My first attempt at creating a custom renderer. It is an OpenGL based renderer w
 |[25](https://github.com/ConnorY97/DreadEngine/commit/18232eb5705e5d0d1a454bec6c724f755f40f387)|One lit and textured model. One super janky model that works but is super ugly!|
 |[26](https://github.com/ConnorY97/DreadEngine/commit/c29a9916bc418ecd1a1fabf1e81ecf91a711bd56)|Fixed broken light. There was a problem with something honestly I don;t know but it works now so all there is left is to add the last object.|
 |[27](https://github.com/ConnorY97/DreadEngine/commit/3ff6162f9bed7f848ee42279d9db9b9667d7ace7)|ITS DONE. There are two lit objects in the worlds worst game engine ever made but it is goddamn done!! Now I should make it better!|
-</details>
+
 #### Trailer
 {% include embed/youtube.html id='kZRH7kmW67w' %}
 
@@ -46,7 +46,7 @@ My first attempt at creating a custom renderer. It is an OpenGL based renderer w
 Second attempt at a custom renderer. It was an exercise in improving my code readability. I does however have less functionality than the first it was a good experience.
 
 [Github](https://github.com/ConnorY97/DreadEngineMK2)
-<details><summary>Commit History</summary>
+
 |Commit|Message|
 |------|-------|
 |[00](https://github.com/ConnorY97/DreadEngine/commit/c4573b283b0ede75df8bebf0913e645beae2feb0)|Initial commit|
@@ -67,13 +67,12 @@ Second attempt at a custom renderer. It was an exercise in improving my code rea
 |[15](https://github.com/ConnorY97/DreadEngine/commit/79ff66a10b8b5c1e4b15a9289d9175e5ef1ef043)|Created Texture class and manager. and cleaned up the code a little bit|
 |[16](https://github.com/ConnorY97/DreadEngine/commit/deeb04b7d47168767d693a1f9c12f0c117dc647b)|Working texturemanager|
 |[17](https://github.com/ConnorY97/DreadEngine/commit/ac643d525cb74796fb599d1f84362560a891b413)|Code clean up|
-</details>
 
 ## Dread Engine Mk3
 Third attempt at a custom renderer with a specific purpose. My aim was to make a game using my own renderer with basic shape collisions. I was able to render 2 shapes in different colors then I stopped development on it. I should finish it.
 
 [Github](https://github.com/ConnorY97/DreadEngineMk3)
-<details><summary>Commit History</summary>
+
 |Commit|Message|
 |------|-------|
 |[00](https://github.com/ConnorY97/DreadEngine/commit/d035a20b3ae8148b7b01e07a56856566427c2e2e)|Initial commit|
@@ -94,4 +93,3 @@ Third attempt at a custom renderer with a specific purpose. My aim was to make a
 |[15](https://github.com/ConnorY97/DreadEngine/commit/74b054d4c170230fcb6f9ef7f7b91be71a0f493a)|Fixing texture issues|
 |[16](https://github.com/ConnorY97/DreadEngine/commit/aed39da822829add593f923cf8a94a7403293c82)|Done quite a bit. Now you can add ballz on the fly,. Thinking of adding a square class so that it can have hp to correspond with its color.. Currently working state|
 |[17](https://github.com/ConnorY97/DreadEngine/commit/3130b51627a9e69b82aaad3c475f97f81daa1cd0)|Creation of Square Class|
-</details>

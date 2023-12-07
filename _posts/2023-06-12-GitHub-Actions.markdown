@@ -2,6 +2,9 @@
 Title: GitHub Actions
 date: 2023-06-12 7:15:19
 categories: [Learning, Devops]
+image:
+    path: /assets/img/actions.png
+    alt: Actions
 ---
 GitHub provides a powerful CI tool in the form of actions. This are process you can define to do a range of things!
 
@@ -13,3 +16,4 @@ The next thing I hope to look into is some sort of code review for commits I mak
 
 The build aspect is very clear, however testing the builds is a bit more vague. I have not successfully implemented the [activation step](https://github.com/marketplace/actions/unity-activate). As my license is now working consistently, I do not think I will have to implement this step.
 
+This was also the first time I have used the `actions/download-artifact@v3`, which can download artifacts created and uploaded with the `game-ci/unity-builder@v4` and `actions/upload-artifact` actions. I have never really thought about the file structure of the `ubuntu` virtual machines used in these actions. But obviously whenever you spin up a new one it will not have any of the files or artifacts created by its predecessors. I an now able to retrieve what I have spent so long building and do something with it! 

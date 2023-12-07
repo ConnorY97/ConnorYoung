@@ -9,4 +9,7 @@ My attempt at making popular mobile game [Ballz](https://play.google.com/store/a
 The hope is to have a branch dedicated to build and development but that is still to come.
 
 You should also be able to play the game here: 
+
+<details><summary>Ballz Game</summary>
 <iframe frameborder="0" src="https://itch.io/embed-upload/9255480?color=333333" allowfullscreen="" width="720" height="1170"><a href="https://connory97.itch.io/ballz">Play Ballz on itch.io</a></iframe>
+</details>

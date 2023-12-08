@@ -4,7 +4,8 @@ date: 2020-02-05 12:00:00
 categories: [Portfolio, CPP]
 ---
 <style>
- table-wrapper { overflow-wrap: break-word; } 
+ table-wrapper { overflow-wrap: break-word; }
+ table { overflow-wrap: break-word; } 
 </style>
 
 ## Dread Engine Mk1

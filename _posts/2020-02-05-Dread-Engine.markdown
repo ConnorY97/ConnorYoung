@@ -3,14 +3,8 @@ Title: DreadEngine
 date: 2020-02-05 12:00:00
 categories: [Portfolio, CPP]
 ---
-
-This is not bold
-<b>Your markdown accepts html</b>
-This is also not bold
-
 <style>
- table { word-wrap: break-word; width: 10%; } 
- 
+ td { word-wrap: break-word; } 
 </style>
 
 ## Dread Engine Mk1

@@ -9,7 +9,8 @@ This is not bold
 This is also not bold
 
 <style>
- table { word-wrap: break-word; }
+ table { word-wrap: break-word; width: 10%; } 
+ 
 </style>
 
 ## Dread Engine Mk1

@@ -8,6 +8,10 @@ This is not bold
 <b>Your markdown accepts html</b>
 This is also not bold
 
+<style>
+ table { word-wrap: break-word; }
+</style>
+
 ## Dread Engine Mk1
 My first attempt at creating a custom renderer. It is an OpenGL based renderer with simple OBJ loading and 2 set lighting sources.
 

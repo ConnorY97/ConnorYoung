@@ -2,9 +2,9 @@
 Title: GitHub Actions
 date: 2023-06-12 7:15:19
 categories: [Learning, Devops]
-image:
-    path: /assets/img/actions.png
-    alt: Actions
+# image:
+#     path: /assets/img/actions.png
+#     alt: Actions
 ---
 GitHub provides a powerful CI tool in the form of actions. This are process you can define to do a range of things!
 

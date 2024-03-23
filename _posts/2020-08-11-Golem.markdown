@@ -2,9 +2,9 @@
 Title: Golem
 date: 2020-08-11 12:00:00
 categories: [Portfolio, C#]
-image:
-    path: /assets/img/Golem.png
-    alt: Golem
+# image:
+#     path: /assets/img/Golem.png
+#     alt: Golem
 ---
 ## Description
 - Genre: Single player, adventure puzzler

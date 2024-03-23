@@ -2,9 +2,9 @@
 Title: 2D Unity
 date: 2023-10-24 12:00:00
 categories: [Portfolio, C#]
-# image:
-#     path: /assets/img/unity.png
-#     alt: Unity
+image:
+    path: /assets/img/unity.png
+    alt: Unity
 ---
 Practicing different forms of AI in a 2D Unity Environment.
 

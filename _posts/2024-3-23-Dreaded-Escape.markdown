@@ -49,3 +49,16 @@ We welcome contributions from the community to enhance DreadedEscape. If you hav
 
 This should be fun.
 [GitHub](https://github.com/AlexMollard/DreadedEscape)
+
+|Commits|Message|
+|-------|-------|
+|[00](https://github.com/AlexMollard/DreadedEscape/commit/14960ab9e0aaf1c5fe6cab3d739f8e72be50544f)|Initial commit|
+|[01](https://github.com/AlexMollard/DreadedEscape/commit/5460ad7a6e126790cf59f1f51f9c318f001b9dd0)|Update README.md|
+|[02](https://github.com/AlexMollard/DreadedEscape/commit/dbd5eb74624f13dae4601122a0aea8a693aee8b1)|Update README.md|
+|[03](https://github.com/AlexMollard/DreadedEscape/commit/816892da1f9e90e9ac8fff3f085b95325a7b91bf)|Spell check ReadMe<br>Correcting the spelling of Chat lol|
+|[04](https://github.com/AlexMollard/DreadedEscape/commit/919edb925c3cea41e6c109bd9abc70fa98413165)|Project Setup|
+|[05](https://github.com/AlexMollard/DreadedEscape/commit/c0ebfadceb6f146a216d93c1e6656dd12fe9060d)|Setup git lfs|
+|[06](https://github.com/AlexMollard/DreadedEscape/commit/ea9da77e67bf2a2a8ead4cf74a03723eb237e0ee)|Removed a bunch of template context, Started adding terrain.|
+|[07](https://github.com/AlexMollard/DreadedEscape/commit/eaa6c56159fe2b4326d5cef6a2e02cdaff581339)|Created main.yml<br>Creating yml so I can set up automation|
+|[08](https://github.com/AlexMollard/DreadedEscape/commit/36020607b5badedde323ff753f61b960c51be5d6)|Added mouse map and assets|
+|[09](https://github.com/AlexMollard/DreadedEscape/commit/c7b18bf01f6cadb1b1fe820be53db77a04a75d4e)|Only trigger on push to build brach|

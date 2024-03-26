@@ -1,4 +1,4 @@
----
+<!-- ---
 Title: Hole.io
 date: 2023-12-24 09:00:00
 categories: [Portfolio, C#]
@@ -6,4 +6,4 @@ categories: [Portfolio, C#]
 
 This will be a copy of [Hole.io](https://play.google.com/store/apps/details?id=io.voodoo.holeio&hl=en&gl=US).
 
-The interesting part of this will be of this will be getting the 'dropping' working. My current thoughts are using gravity manipulation. However, I do not think that will work. It may require something more procedural. Something like marching cubes maybe?
+The interesting part of this will be of this will be getting the 'dropping' working. My current thoughts are using gravity manipulation. However, I do not think that will work. It may require something more procedural. Something like marching cubes maybe? -->

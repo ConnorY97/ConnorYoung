@@ -1,7 +1,7 @@
 ---
 Title: Dread Escape
 date: 2024-03-23 09:00:00
-categories: [Portfolio, C++]
+categories: [Portfolio, CPP]
 ---
 JOLLY COLLABORATION!
 

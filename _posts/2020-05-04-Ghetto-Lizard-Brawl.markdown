@@ -12,7 +12,7 @@ image:
 - Language: C#
 - Platform: Windows
 
-A single player brawl, set in an underground lizard battle ring. My role in this project was to create the AI for the enemy lizards. It was a great learning experience, using a finite state machine to control the behavior of the AI. This was done to balance it’s aggression while also making it appear to intelligently select targets to attack.
+I worked on a solo fighting game set in an underground lizard arena. My job was to make the enemy lizards smart. It was awesome learning how to use a finite state machine to control their behavior. I had to balance their aggression while making them look like they were picking their targets wisely to attack.
 
 ## Trailer
 {% include embed/youtube.html id='1v4G0vy9g3I' %}

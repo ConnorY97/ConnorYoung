@@ -17,7 +17,7 @@ UI is a still a work in progress: <br>
 Things I am practicing:
 1. Inheritance: I have the base [Resources](https://github.com/ConnorY97/AOE/blob/main/Assets/Scripts/Resource.cs) class which all interactable resources will inherit from. This is useful as I can put all the boilerplate code in the base class which all children will require. I have used this a few times, but never anything in depth.
 2. Object Orientated programming: I can confirm I am not doing this well. There is a bit of spaghetti code going on, but things are slightly modular. I am trying to look forward when implementing solutions. The best examples of this is the `ResourceUI` 
-```C#
+```c#
 public void IncrementResource(Dictionary<ResourceType, float> returnResources)
 {
     // Pass over returned resources
@@ -39,7 +39,7 @@ public void IncrementResource(Dictionary<ResourceType, float> returnResources)
 ```
 Here I am using two lists, `mTotalResources` and `mResourceCountUI`. As long as I add the UI in the correct order, then I will be able to add un infinite amount of resources and UI without having to touch this code. I am quite happy with it.
 3. Naming Conventions and Getters and Setters: I am using the `m` prefix for my member variables. I normally do not use this as I find it annoying when used in conjunction with Intlisense. As I will be thinking of `ore` so I type `ore` but of course I do not have `ore` I have `mOre`. However, it has been useful I have found in functions where I cannot come up with better names that what the member variable is called. But that is now fine as I can just use `mOre = ore`! In terms of Getters and Setters an example is
-```C#
+```c#
 private Resource mTarget = null;
 public Resource Target
 {

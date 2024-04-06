@@ -5,11 +5,62 @@ categories: [Portfolio, C#]
 ---
 Working on creating a simple AOE clone!
 
-Progress! There is some cool UI:
+The prompt for this idea was all the adds on TikTok of small games with lots of moving pieces on the screen. They are all money sinks where to make any real progress you just need to keep swiping ur card. So I thought I'd just make my own.
 
-Currently only have wood being incremented but will work on getting the rest working soon.
+The current idea is to have some villagers who can collect resources, hardest part currently is getting a view/perspective that would allow fine control while showing everything on the screen.
 
-I will also take some time to properly set up this page as it has been a bit of an after thought so far.
+Currently, I have two collectable resources that `Upgrade` the `Humans`. Wood allows for the `Humans` to move fast, logic? None. Ore allows them to `Interact` faster. Recently implemented a simple particle system when they `Interact` so I can actually tell things are happening. I am going to use some place holder object's but this could also be an opportunity to learn some more simple Blender so I can quickly whip together temp objects when I need to.
+
+UI is a still a work in progress:
+![AOE UI](/assets/img/AoeUI.png){: width="486" height="294" }
+
+Things I am practicing:
+1. Inheritance: I have the base [Resources](https://github.com/ConnorY97/AOE/blob/main/Assets/Scripts/Resource.cs) class which all interactable resources will inherit from. This is useful as I can put all the boilerplate code in the base class which all children will require. I have used this a few times, but never anything in depth.
+2. Object Orientated programming: I can confirm I am not doing this well. There is a bit of spaghetti code going on, but things are slightly modular. I am trying to look forward when implementing solutions. The best examples of this is the `ResourceUI` 
+```
+public void IncrementResource(Dictionary<ResourceType, float> returnResources)
+{
+    // Pass over returned resources
+    for (int i = 0; i < (int)ResourceType.MAX; i++)
+    {
+        mTotalResources[(ResourceType)i] += returnResources[(ResourceType)i];
+
+
+        // Get rid of this once I have all the UI set up
+        // Bandaid to stop out of bounds error
+        if (i < mResourceCountUI.Count)
+        {
+            mResourceCountUI[i].text = mTotalResources[(ResourceType)i].ToString();
+        }
+    }
+
+    CheckUpgradeAvailability();
+}
+```
+Here I am using two lists, `mTotalResources` and `mResourceCountUI`. As long as I add the UI in the correct order, then I will be able to add un infinite amount of resources and UI without having to touch this code. I am quite happy with it.
+3. Naming Conventions and Getters and Setters: I am using the `m` prefix for my member variables. I normally do not use this as I find it annoying when used in conjunction with Intlisense. As I will be thinking of `ore` so I type `ore` but of course I do not have `ore` I have `mOre`. However, it has been useful I have found in functions where I cannot come up with better names that what the member variable is called. But that is now fine as I can just use `mOre = ore`! In terms of Getters and Setters an example is
+```
+private Resource mTarget = null;
+public Resource Target
+{
+    set
+    {
+        if (value != null)
+        {
+            mTarget = value;
+
+            mAgent.SetDestination(mTarget.transform.position);
+
+            mArrived = false;
+        }
+    }
+
+    get { return mTarget; }
+}
+```
+Here I can do error checking on the passed in value `if (value != null)` then followed by some code. This is very cool, I have never used this before and it has so far been super helpful.
+
+I will update again when there is more progress!
 
 [Github](https://github.com/ConnorY97/AOE)
 

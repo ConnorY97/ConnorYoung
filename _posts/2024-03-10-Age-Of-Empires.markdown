@@ -60,19 +60,94 @@ public Resource Target
 ```
 Here I can do error checking on the passed in value `if (value != null)` then followed by some code. This is very cool, I have never used this before and it has so far been super helpful.
 
-I will update again when there is more progress!
+I found an issue! Can you figure it out?
+```c#
+// Check again all the current existing resource positions
+for (int y = 0; y < mResourcePositions.Count; y++)
+{
+    float dist = Vector3.Distance(newPos, mResourcePositions[y]);
+    // While the distance is less than desired
+    while (dist < mSpawnDistance)
+    {
+        // Keep looking for a new position till one is found
+        newPos = new Vector3(UnityEngine.Random.Range(-x, x), yHeight, UnityEngine.Random.Range(-z, z));
+        dist = Vector3.Distance(newPos, mResourcePositions[y]);
+    }
+}
+mResourcePositions.Add(newPos);
+```
+The issue with the original function was, when a resource found it was too close to another. It would simply just be moved on top of another. Found a solution `Physics.OverlapSphere()`. Simple right? WRONG. So many issue, with my new Trees and Rocks being complex shapes that might have broken the check? The instantiate function not actually placing the objects? Unity not actually being able to keep up with placing the objects and checking if they are overlapping? No clue. But I did find a solution in the end. 
+1. I instantiate all the `Resources` at `Vector3(100,100,100)`.
+2. Using an Enumerator to implement a delay between resource placement.
+3. This seems to work?
+
+This is the new function:
+```c#
+private Vector3 GetFreePosition(Bounds spawnBounds, float yHeight)
+{
+    float x = spawnBounds.extents.x;
+    float z = spawnBounds.extents.z;
+    // To stop resources spawning on top of each other
+    //  First we give it a position
+    Vector3 newPos = new Vector3(UnityEngine.Random.Range(-x, x), yHeight, UnityEngine.Random.Range(-z, z));
+
+    // Trying a new method for spawning objects.
+    // Rather than going through a list of position, I will shpere cast at the spawn location a check if there is anything other than the ground there.
+    var checkResult = Physics.OverlapSphere(newPos, mSpawnDistance);
+
+    // Recursion keep checking till we find a free stop.
+    // Hopefully this will help with the debugging.
+    if (checkResult.Length > 1)
+    {
+        newPos = GetFreePosition(spawnBounds, yHeight);
+    }
+
+    Debug.Log(checkResult.Length.ToString());
+    // Assign the free position
+    return newPos;
+}
+
+IEnumerator PlaceObjects()
+{
+    //Print the time of when the function is first called.
+    Debug.Log("Started Coroutine at timestamp : " + Time.time);
+
+    //yield on a new YieldInstruction that waits for 5 seconds.
+
+    for (int i = 0; i < mObjects.Count; i++)
+    {
+        MeshCollider groundMesh = mGround.GetComponent<MeshCollider>();
+        Bounds bounds = groundMesh.bounds;
+        mObjects[i].transform.position = GetFreePosition(bounds, 0.0f);
+        yield return new WaitForSeconds(0.125f);
+    }
+    //After we have waited 5 seconds print the time again.
+    Debug.Log("Finished Coroutine at timestamp : " + Time.time);
+}
+```
+
+The fun stuff that I did do today was create a `Tree` and `Rock` in Blender! It is a good first attempt, I can put a lot more detail into the trees and add some actual ore lumps in the rocks but they are good for now!
+![Tree](/assets/img/tree.png){: width="486" height="294" }![rock](/assets/img/rock.png){: width="486" height="294" }
 
 [Github](https://github.com/ConnorY97/AOE)
 
-|Commits|Message|
-|-------|-------|
-|[00](https://github.com/ConnorY97/AOE/commit/d5e7404325de290590a17934b66e8617b1a2cf30)|Inital Commit|
+|[00](https://github.com/ConnorY97/AOE/commit/d5e7404325de290590a17934b66e8617b1a2cf30)|Initial commit|
 |[01](https://github.com/ConnorY97/AOE/commit/75c3b03cd29364728890e9a0afb30cbb54d56df7)|Adding Unity proj|
-|[02](https://github.com/ConnorY97/AOE/commit/83dc69537b632e8805cda318b444c85e9f75e4fd)|Beginning work.<br>Added:<br>1. Game Manager<br>2. Tree<br>3. Prefabs for each<br><br>Need to work on:<br>Everything else|
-|[03](https://github.com/ConnorY97/AOE/commit/e7b5bdd7b340bf380d37f13561c55da2544b0908)|Currently I am spawning 100 tree which are placed randomly on the ground. A single brave human is being spawned with them, he can currently walk up to any of the trees and merge with them (Not intended behavior).<br><br>Things to do:<br>Some how update the nav mesh when the trees are added to agent's avoid them.<br>Spawn more humans<br>Better trees<br>Better humans.<br><br>PROGRESS|
-|[04](https://github.com/ConnorY97/AOE/commit/bf1a0cdc55928be8fb222a6a081f4e7f0d48e8b1)|Improvments,<br>I made some improvements to the UI. But, it is still very spaghetti and it has very little room for expansion. Will still need to look into inheritance again.<br><br>But making progress!|
-|[05](https://github.com/ConnorY97/AOE/commit/627eff4c02ba05fc613f4303358ec4a75d312475)|The great refactoring has begun!<br>It is always easier to reactor as you go rather than doing it at the end. If any of my previous projects are to go by. Anyway, created inheritance for `resource` objects as it will improve expandability and I need to work on it. Removed a lot of the functionality for now but it will still be easer starting again. Lots to come!|
-|[06](https://github.com/ConnorY97/AOE/commit/2bf0b28c571504eeec29c6652fc2114e107592750)|More work on Resources<br>Back to being able to chop down trees and return them to the `TownCentre`. Started setting up the UI for resource count, however the hitpoints are still not working as expected. Good work though.|
-|[07](https://github.com/ConnorY97/AOE/commit/d894bf5fe070831a8fdffa1c94b8c808424c4989)|THE SPAGHETTI<br>So, I am not sure if things are getting better or worse lol.<br>Changed the Resource class to an `Abstract` class which I have never used before. I believe the benefit is that I can have empty functions?<br><br>I will continue to work on making things more modular which would be nice, but making good progress.<br><br>Implemented some nicer UI for when resources have been retrieved. Next it to use the retrieved resources to improve the Town Centre/Humans.<br><br>Looking good so far.|
-|[08](https://github.com/ConnorY97/AOE/commit/c9fe87db4beddac0cf70a42d66106227723a5678)|RAYS<br>I have improved the way `Humans` return `Home` as I noticed they kept returning to the same point and it looked funny. Kinda like they were trying to que. Now they will raycast from their current position to the house so that they all get a different point to return to, makes it feel a lot better.|
-|[09](https://github.com/ConnorY97/AOE/commit/810e053be9dbf61b4eb64e441093858de8945b7a)|SPACING<br>Implemented a spacing system for random tree spawning to prevent them from occupying the same space. Will need to to some clean up soon. Added some code comments.|
+|[02](https://github.com/ConnorY97/AOE/commit/d5e7404325de290590a17934b66e8617b1a2cf30)|Initial commit. Beginning work. Added:. 1. Game Manager. 2. Tree. 3. Prefabs for each. Need to work on:. Everything else|
+|[03](https://github.com/ConnorY97/AOE/commit/75c3b03cd29364728890e9a0afb30cbb54d56df7)|Adding Unity proj|
+|[04](https://github.com/ConnorY97/AOE/commit/83dc69537b632e8805cda318b444c85e9f75e4fd)|Beginning work. Added: 1. Game Manager 2. Tree. 3. Prefabs for each. Need to work on: Everything else|
+|[05](https://github.com/ConnorY97/AOE/commit/e7b5bdd7b340bf380d37f13561c55da2544b0908)|TREES!. Currently I am spawning 100 tree which are placed randomly on the ground. A single brave human is being spawned with them, he can currently walk up to any of the trees and merge with them (Not intended behavior). Things to do: Some how update the nav mesh when the trees are added to agent's avoid them. Spawn more humans. Better trees. Better humans. PROGRESS|
+|[06](https://github.com/ConnorY97/AOE/commit/418aea5367fc32f16b6750ddf441767490f47144)|Good work!. The human can now interact with a tree and cut it down! When it has been cut down, it will disappear and the human will return to the house. Have some UI now which will let you know when you have correctly selected a human, need to add trees and other objects. There is HitPoints UI but it is very basic. Very very spaghetti code right now, which is not great. But it currently works. Things to do:. Improve UI. Look into refactoring early. Animations. Improve current assets|
+|[07](https://github.com/ConnorY97/AOE/commit/bf1a0cdc55928be8fb222a6a081f4e7f0d48e8b1)|Improvments, I made some improvements to the UI. But, it is still very spaghetti and it has very little room for expansion. Will still need to look into inheritance again. But making progress!|
+|[08](https://github.com/ConnorY97/AOE/commit/627eff4c02ba05fc613f4303358ec4a75d312475)|The great refactoring has begun!. It is always easier to reactor as you go rather than doing it at the end. If any of my previous projects are to go by. Anyway, created inheritance for `resource` objects as it will improve expandability and I need to work on it. Removed a lot of the functionality for now but it will still be easer starting again. Lots to come!|
+|[09](https://github.com/ConnorY97/AOE/commit/2bf0b28c571504eeec29c6652fc2114e10759275)|More work on Resources. Back to being able to chop down trees and return them to the `TownCentre`. Started setting up the UI for resource count, however the hitpoints are still not working as expected. Good work though.|
+|[10](https://github.com/ConnorY97/AOE/commit/d894bf5fe070831a8fdffa1c94b8c808424c4989)|THE SPAGHETTI. So, I am not sure if things are getting better or worse lol. Changed the Resource class to an `Abstract` class which I have never used before. I believe the benefit is that I can have empty functions?. I will continue to work on making things more modular which would be nice, but making good progress. Implemented some nicer UI for when resources have been retrieved. Next it to use the retrieved resources to improve the Town Centre/Humans. Looking good so far.|
+|[11](https://github.com/ConnorY97/AOE/commit/c9fe87db4beddac0cf70a42d66106227723a5678)|RAYS. I have improved the way `Humans` return `Home` as I noticed they kept returning to the same point and it looked funny. Kinda like they were trying to que. Now they will raycast from their current position to the house so that they all get a different point to return to, makes it feel a lot better.|
+|[12](https://github.com/ConnorY97/AOE/commit/810e053be9dbf61b4eb64e441093858de8945b7a)|SPACING. Implemented a spacing system for random tree spawning to prevent them from occupying the same space. Will need to to some clean up soon. Added some code comments.|
+|[13](https://github.com/ConnorY97/AOE/commit/2a75c8edb700ab1c42184d3cfa28b14fb29d02fe)|Code clean up and Uniqueness. Lots of clean up, using the private/public names of vars to reduce the number of functions and make things a bit easier to read. Added a bit more uniqueness to the humans created. Their materials and icons will not have a different color assigned at creation to it is a bit easier to see which `Human` you have selected at any time. I want to now work on the first improvement: movement speed! You will need 50 wood to increase the human move speed.|
+|[14](https://github.com/ConnorY97/AOE/commit/01f536569e5c55218000896a6f6227be23856832)|SPEED. Implemented the first upgrade, SPEED. When the humans return 50 wood, it is possible to increase their speed. There is absolutely 0 juice. Maybe I could use some sort of sprite on each of the `Humans` when the upgrade is applied. Things to investigate:. - Why when you increase the movement speed of the `NavMeshAgents` do they start to overshoot their destinations!??! Such fun.|
+|[15](https://github.com/ConnorY97/AOE/commit/746052d722f78aa36d8acc9270a4fc93b73cc5fe)|Movement improvements. So the `NavMesh Agent` is dumb. So I spent some time fixing that. Spawning the humans before the trees so they are higher in the Unity hierarchy and easier to find for debugging.|
+|[16](https://github.com/ConnorY97/AOE/commit/9e642f789c3583b007f4b507efe672cb1379c4f1)|ORE!. Added a new collectable `Ore`! I think this will improve `Interaction` time, reducing the time it takes to collect resources. Also improved the villager icon, but it looks a bit funky with the color matching. Implemented a `mResourcePositions` for spawning checking rather than going through each resource list to make sure everything is spawning correctly. Did some more code clean up and added some more functions for boiler plate code. Happy with the progress!|
+|[17](https://github.com/ConnorY97/AOE/commit/90687cce68dbd525467a3c818bb69a1e8acc3d77)|MORE UPGRADES!. The interaction speed can be improved after gathering ore! Improved the upgrade function, cleaned up some redundant functions and improved checking if upgrades are even available.|
+|[18](https://github.com/ConnorY97/AOE/commit/b735b9c0fdc7619828f59e90e87e4c247aee2aea)|Improving Nav Agent Values|
+|[19](https://github.com/ConnorY97/AOE/commit/d4099ca59dcf136ced30a8333337c2d6031cc389|Pain!. Cools things first! Created Trees and Rocks in Blender to replace the terrible Unity objects I was using before, which has greatly improved the look of the game already. The not so cool stuff. So, I found an issue with the `Resource` placement. The issue with the original function was, when a resource found it was too close to another. It would simply just be moved on top of another. Found a solution `Physics.OverlapSphere()`. Simple right? WRONG. So many issue, with my new Trees and Rocks being complex shapes that might have broken the check? The instantiate function not actually placing the objects? Unity not actually being able to keep up with placing the objects and checking if they are overlapping? No clue. But I did find a solution in the end. 1. I instantiate all the `Resources` at `Vector3(100,100,100)`. 2. Using an Enumerator to implement a delay between resource placement. 3. This seems to work? This was very annoying but I got it working in the end!. Good stuff!|

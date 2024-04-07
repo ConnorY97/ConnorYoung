@@ -127,10 +127,12 @@ IEnumerator PlaceObjects()
 ```
 
 The fun stuff that I did do today was create a `Tree` and `Rock` in Blender! It is a good first attempt, I can put a lot more detail into the trees and add some actual ore lumps in the rocks but they are good for now!
-![Tree](/assets/img/tree.png){: width="486" height="294" }![rock](/assets/img/rock.png){: width="486" height="294" }
+![Tree](/assets/img/tree.png){: width="243" height="147" }![rock](/assets/img/rock.png){: width="246" height="147" }
 
 [Github](https://github.com/ConnorY97/AOE)
 
+|Commits|Message|
+|-------|-------|
 |[00](https://github.com/ConnorY97/AOE/commit/d5e7404325de290590a17934b66e8617b1a2cf30)|Initial commit|
 |[01](https://github.com/ConnorY97/AOE/commit/75c3b03cd29364728890e9a0afb30cbb54d56df7)|Adding Unity proj|
 |[02](https://github.com/ConnorY97/AOE/commit/d5e7404325de290590a17934b66e8617b1a2cf30)|Initial commit. Beginning work. Added:. 1. Game Manager. 2. Tree. 3. Prefabs for each. Need to work on:. Everything else|

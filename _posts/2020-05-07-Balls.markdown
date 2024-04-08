@@ -2,10 +2,38 @@
 Title: Ballz
 date: 2020-05-07 03:05:43
 categories: [Portfolio, C#]
+
+image:
+    path: /assets/img/Ballz.png
+    alt: Ballz
 ---
+My attempt at making popular mobile game [Ballz](https://play.google.com/store/apps/details?id=com.ketchapp.ballz&hl=en&gl=US&pli=1). I have got the game to a state that I am happy with. It has a game loop with some cool visuals and audio. <br>
+![Ballz](/assets/img/Ballz.png){: width="300" height="800" .centre}
 
-My attempt at making popular mobile game [Ballz](https://play.google.com/store/apps/details?id=com.ketchapp.ballz&hl=en&gl=US&pli=1). I am also using it as my guinea pig for getting my GitHub build actions working. Which means the master branch is getting flooded with commits which have little to do with the actual game development.
+### Things that I am proud of in this project are:
+1. Creating the 'aiming' effect, the large red triangular thing, without any outside help. By that I mean I was able to do the math and the effect all by myself!
+2. Setting up the grid for the boxes and triangles, I went through a lot of iterations for this. It began with a list of all the objects and iterating through them to update their position. Then it moved to a much more intelligent grid system where each object is aware of its own position and where it will be moving in the next round.
+3. The cool bloom effects and the materials used by all the objects in the game I made. Which you can probably tell by how janky it looks haha. But it was a good first attempt using [Gimp](https://www.gimp.org/) as I have never called myself an artist:<br>
+![Box Emission](/assets/img/BoxEmissionMap.png){: width="246" height="200" .normal}
+![Triangle Emission](/assets/img/TriangleEmissionMap.png){: width="246" height="200" .normal}<br>
+I kind of like the effect of the triangle not being perfect.
+3. Used some simple inheritance for the spawnable objects. This made it easy to add the triangle which increased the total amount of balls.
 
-The hope is to have a branch dedicated to build and development but that is still to come.
+### Some things I still want to improve upon:
+1. How the balls move once the hit the base.
+2. Displaying the 'balls to shoot' and 'returned balls'. It is very spammy and massively inaccurate.
+3. Add some background images to give the idea of progressing levels.
+4. Do more with the audio as the levels get higher.
+5. There is one issue I need to resolve: [Public Reviews #1](https://github.com/ConnorY97/Ballz/issues/1)
 
-You should also be able to play the game here, recommended to play on Mobile: [Ballz](https://connory97.itch.io/ballz)
+## You can play the game right now!
+<details><summary>Ballz</summary>
+<iframe frameborder="0" src="https://itch.io/embed-upload/10128126?color=333333" allowfullscreen="" width="800" height="740"><a href="https://connory97.itch.io/ballz">Play Ballz on itch.io</a></iframe>
+</details>
+
+## GitHub Actions
+The cool thing that I was able to set up with this project was a GitHub action (following [game.ci](https://game.ci/)) to build the Unity project for me, then using another action to upload the build to to my Itch page (following [Creating a free build pipeline for Unity games using GitHub Actions](https://jaidengerig.medium.com/create-a-cd-pipeline-to-auto-publish-unity-games-from-github-to-itch-io-in-30-minutes-for-free-bae3b254283c))!
+
+The major advantage of this would be the ability to distribute test builds QA, testers or your audience without having to do much yourself. Although there is a lot in the set up. Once everything it done, it should continue to work without much up keep!
+
+Hopefully, I will be able to use this knowledge for a larger scale project in the future.

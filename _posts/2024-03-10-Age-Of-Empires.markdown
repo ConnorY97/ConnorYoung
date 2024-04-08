@@ -2,6 +2,9 @@
 Title: Age Of Empires
 date: 2024-03-09 09:00:00
 categories: [Portfolio, C#]
+image:
+    path: /assets/img/AOE.png
+    alt: AOE
 ---
 Working on creating a simple AOE clone!
 
@@ -14,9 +17,9 @@ Currently, I have two collectable resources that `Upgrade` the `Humans`. Wood al
 UI is a still a work in progress: <br>
 ![AOE UI](/assets/img/AoeUI.png){: width="486" height="294" }
 
-Things I am practicing:
+### Things I am practicing:
 1. Inheritance: I have the base [Resources](https://github.com/ConnorY97/AOE/blob/main/Assets/Scripts/Resource.cs) class which all interactable resources will inherit from. This is useful as I can put all the boilerplate code in the base class which all children will require. I have used this a few times, but never anything in depth.
-2. Object Orientated programming: I can confirm I am not doing this well. There is a bit of spaghetti code going on, but things are slightly modular. I am trying to look forward when implementing solutions. The best examples of this is the `ResourceUI` 
+2. Object Orientated programming: I can confirm I am not doing this well. There is a bit of spaghetti code going on, but things are slightly modular. I am trying to look forward when implementing solutions. The best examples of this is the `ResourceUI`
 ```c#
 public void IncrementResource(Dictionary<ResourceType, float> returnResources)
 {
@@ -60,6 +63,7 @@ public Resource Target
 ```
 Here I can do error checking on the passed in value `if (value != null)` then followed by some code. This is very cool, I have never used this before and it has so far been super helpful.
 
+### Issues
 I found an issue! Can you figure it out?
 ```c#
 // Check again all the current existing resource positions
@@ -126,11 +130,17 @@ IEnumerator PlaceObjects()
 }
 ```
 
+### Fun Stuff
 The fun stuff that I did do today was create a `Tree` and `Rock` in Blender! It is a good first attempt, I can put a lot more detail into the trees and add some actual ore lumps in the rocks but they are good for now!
 <br>
 ![Tree](/assets/img/tree.png){: width="243" height="147" .normal}
 ![rock](/assets/img/rock.png){: width="246" height="200" .normal}
 
+## GitHub Actions
+I set up a GitHub actions like I did for [Balls](/_posts/2020-05-07-Balls.markdown#github-actions). Which means that the game is being updated on the build branch and posted to itch IO here: [AOE](https://connory97.itch.io/aoe) or below!
+<details><summary>Age Of Empires</summary>
+<iframe frameborder="0" src="https://itch.io/embed-upload/10128116?color=333333" allowfullscreen="" width="1000" height="720"><a href="https://connory97.itch.io/aoe">Play AOE on itch.io</a></iframe>
+</details>
 <br>
 [Github](https://github.com/ConnorY97/AOE)
 

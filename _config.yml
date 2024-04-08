@@ -76,7 +76,7 @@ img_cdn:
 avatar: assets/img/PP.png
 
 # boolean type, the global switch for TOC in posts.
-toc: false
+toc: true
 
 comments:
   active: # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable

@@ -137,7 +137,7 @@ The fun stuff that I did do today was create a `Tree` and `Rock` in Blender! It 
 ![rock](/assets/img/rock.png){: width="246" height="200" .normal}
 
 ## GitHub Actions
-I set up a GitHub actions like I did for [Balls](/_posts/2020-05-07-Balls.markdown#github-actions). Which means that the game is being updated on the build branch and posted to itch IO here: [AOE](https://connory97.itch.io/aoe) or below!
+I set up a GitHub actions like I did for [Balls](/posts/Balls#github-actions). Which means that the game is being updated on the build branch and posted to itch IO here: [AOE](https://connory97.itch.io/aoe) or below!
 <details><summary>Age Of Empires</summary>
 <iframe frameborder="0" src="https://itch.io/embed-upload/10128116?color=333333" allowfullscreen="" width="1000" height="720"><a href="https://connory97.itch.io/aoe">Play AOE on itch.io</a></iframe>
 </details>

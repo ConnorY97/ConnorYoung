@@ -8,6 +8,12 @@ image:
 ---
 Working on creating a simple AOE clone!
 
+Play on itch IO here: [AOE](https://connory97.itch.io/aoe) or below!
+
+<details><summary>Age Of Empires</summary>
+<iframe frameborder="0" src="https://itch.io/embed-upload/10128116?color=333333" allowfullscreen="" width="1000" height="720"><a href="https://connory97.itch.io/aoe">Play AOE on itch.io</a></iframe>
+</details>
+<br>
 The prompt for this idea was all the adds on TikTok of small games with lots of moving pieces on the screen. They are all money sinks where to make any real progress you just need to keep swiping ur card. So I thought I'd just make my own.
 
 The current idea is to have some villagers who can collect resources, hardest part currently is getting a view/perspective that would allow fine control while showing everything on the screen.
@@ -137,11 +143,8 @@ The fun stuff that I did do today was create a `Tree` and `Rock` in Blender! It 
 ![rock](/assets/img/rock.png){: width="246" height="200" .normal}
 
 ## GitHub Actions
-I set up a GitHub actions like I did for [Balls](/posts/Balls#github-actions). Which means that the game is being updated on the build branch and posted to itch IO here: [AOE](https://connory97.itch.io/aoe) or below!
-<details><summary>Age Of Empires</summary>
-<iframe frameborder="0" src="https://itch.io/embed-upload/10128116?color=333333" allowfullscreen="" width="1000" height="720"><a href="https://connory97.itch.io/aoe">Play AOE on itch.io</a></iframe>
-</details>
-<br>
+I set up a GitHub actions like I did for [Balls](/posts/Balls#github-actions). Which means that the game is being updated on the build branch and posted to Itch.
+
 [Github](https://github.com/ConnorY97/AOE)
 
 |Commits|Message|

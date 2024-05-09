@@ -2,6 +2,9 @@
 Title: DreadEngine
 date: 2020-02-05 12:00:00
 categories: [Portfolio, CPP]
+image:
+    path: /assets/img/hqdefault.png
+    alt: DE
 ---
 ## Dread Engine Mk1
 In university, I got my first taste of computer graphics through a course focused on real-time rendering using [OpenGL](https://www.opengl.org/). We had to create two 3D objects with textures and add a couple of lights.

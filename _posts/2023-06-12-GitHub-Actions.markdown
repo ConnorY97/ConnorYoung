@@ -5,6 +5,7 @@ categories: [Learning, Devops]
 image:
     path: /assets/img/actions.png
     alt: Actions
+published: false
 ---
 GitHub Actions is a robust CI tool that allows you to define processes for various tasks. I've primarily used it for Unity builds, but I'm currently experimenting with uploading build projects to ItchIO. My goal is to create a build branch for my Unity projects, making it easy to update and share my games for testing without requiring downloads.
 

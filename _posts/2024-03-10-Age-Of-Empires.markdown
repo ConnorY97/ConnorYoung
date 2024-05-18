@@ -86,7 +86,7 @@ for (int y = 0; y < mResourcePositions.Count; y++)
 }
 mResourcePositions.Add(newPos);
 ```
-The issue with the original function was, when a resource found it was too close to another. It would simply just be moved on top of another. Found a solution `Physics.OverlapSphere()`. Simple right? WRONG. So many issue, with my new Trees and Rocks being complex shapes that might have broken the check? The instantiate function not actually placing the objects? Unity not actually being able to keep up with placing the objects and checking if they are overlapping? No clue. But I did find a solution in the end. 
+The issue with the original function was, when a resource found it was too close to another. It would simply just be moved on top of another. Found a solution `Physics.OverlapSphere()`. Simple right? WRONG. So many issue, with my new Trees and Rocks being complex shapes that might have broken the check? The instantiate function not actually placing the objects? Unity not actually being able to keep up with placing the objects and checking if they are overlapping? No clue. But I did find a solution in the end.
 1. I instantiate all the `Resources` at `Vector3(100,100,100)`.
 2. Using an Enumerator to implement a delay between resource placement.
 3. This seems to work?

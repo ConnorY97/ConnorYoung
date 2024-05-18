@@ -74,7 +74,7 @@ public class EnemyBaseTesting
 }
 ```
 This [Medium Article](https://medium.com/codex/writing-unit-tests-for-my-game-in-unity-b0163e2c9b47) was a fantastic resource I found to add the `[TestCase(X,X)]` which just allows you to pass in variables to the testing functions. Even more than one!
-So far this has successfully found 2 issues with code changes I have made. This was really cool! The tests only pass on as much information as you give them, so the more detail the better!
+So far this has successfully found 2 issues with code changes I have made. This was really cool! The tests only pass on as much information as you give them, so the more detail the better! <br>
 ![Successfullunittests](/assets/img/unittests.png){: width="486" height="294" }
 
 [itch](https://connory97.itch.io/relentlessattack)

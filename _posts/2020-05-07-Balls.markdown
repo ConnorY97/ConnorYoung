@@ -2,7 +2,6 @@
 Title: Ballz
 date: 2020-05-07 03:05:43
 categories: [Portfolio, C#]
-
 image:
     path: /assets/img/Ballz.png
     alt: Ballz

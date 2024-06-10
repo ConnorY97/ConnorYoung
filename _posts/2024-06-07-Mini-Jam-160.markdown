@@ -1,0 +1,26 @@
+---
+Title: Mini Jam 160
+date: 2024-06-07 18:00:00
+categories: [Portfolio, C#]
+image:
+    path: /assets/img/DefendTheLight.png
+    alt: DefendtheLight
+---
+# Our First Game Jam
+I participated in the [Itch.io Mini Jam 160](https://itch.io/jam/mini-jam-160-light) with [Alex](https://github.com/AlexMollard) and [Reyhan](https://github.com/Dyfust).
+
+Reyhan and I came up with the idea for defend the light using Samsung notes and some scribbles. The theme was `Light` and the limitation was `Speed is Key`. So the idea of protecting the light producing birds from demon dogs just made sense.
+
+### Roles
+I acted a game design lead, and Reyhan and Alex were both primarily programmers. Alex did a lot of the beatifying of the final game as well. We all only had a few hours here and there to work on the project so I am very happy with how it turned out. I would like to come back to this project in the future to iron out some of the kinks.
+
+### What went wrong
+Not having a lot of time impacted the scope of the game massively and what we were able to work on. Not having an artist meant I had to grab a lot of assets from the Unity store. Finally, when trying to implement a second camera to make sure the scary face was always visible, I managed to break the whole game. I was then able to go back through the repository to find the break and revert it.
+
+### What to do next time
+Try find a jam that we are all more available for. Maybe trying to find an artist, and implement some more checking so I don't break the project just before launch.
+
+### The project
+The game can be played here: [DefentTheLight](https://connory97.itch.io/lightjam) - Currently set to private.
+<br>
+The repo can be found here: [MiniJam160](https://github.com/ConnorY97/MiniJam160)

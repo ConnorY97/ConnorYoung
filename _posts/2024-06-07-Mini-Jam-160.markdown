@@ -27,42 +27,42 @@ The repo can be found here: [MiniJam160](https://github.com/ConnorY97/MiniJam160
 
 |Commits|Message|
 |-------|-------|
-|[1](https://github.com/ConnorY97/MiniJam160551d4583bf52819943f29b1a06066f291ac9f3c3) | Initial commit|
-|[2](https://github.com/ConnorY97/MiniJam16020e10822a85b58b79c33600232045158f0b30982) | Adding Unity Proj|
-|[3](https://github.com/ConnorY97/MiniJam16052aceb2ac0161a73638c165971a61b74d4fa88d1) | Local Build|
-|[4](https://github.com/ConnorY97/MiniJam16029f088fc3aba59c620e0866d6832d66f3e7a0350) | Confirming WebGL Build|
-|[5](https://github.com/ConnorY97/MiniJam1609854836331a71f145a10b63f395f1a6cc5780fbe) | Create build.yml|
-|[6](https://github.com/ConnorY97/MiniJam1601ee4bc7716a974467bf7041814b6189a54e9252d) | Added basic game play elements<br>Done:<br>Super basic player movement<br>Basic bird movement and light<br>Basic evil dog movement, attack and light<br>Basic environmental lighting|
-|[7](https://github.com/ConnorY97/MiniJam160108619cdddec66e5538cf1bae686ab588324496e) | Improvements<br>Added:<br>Really bad camera controls<br>Health bar that decreases while you are out of light|
-|[8](https://github.com/ConnorY97/MiniJam160009b50345655226638c550abcb058659c4149251) | Dog spawning<br>Added the begging of spawning dogs in random positions. Fixed some errors.|
-|[9](https://github.com/ConnorY97/MiniJam160d1fb866140d8ba9c3ff4879a831907e0443e16bc) | Please someone fix the movement|
-|[10](https://github.com/ConnorY97/MiniJam160e5604a00e06e8bf28b89a435f83ea9f7fe5c9ed5) | Fixing build error|
-|[11](https://github.com/ConnorY97/MiniJam160421dc3a970b0d53c352eead5bf0aeac570801b46) | Fixed player movement & moved bird movement code to FixedUpdate too.|
-|[12](https://github.com/ConnorY97/MiniJam160ee90d6f91bb6ce5f5f1d276f91df540e98cb02e0) | Creating main game loop<br>Added:<br>Game loop<br>Better dog movement<br>Improved code independence<br>Imported some more stuff|
-|[13](https://github.com/ConnorY97/MiniJam1600487f2036214c5a4dc6cbb8dcc945ede8dc5b270) | Adding FMOD|
-|[14](https://github.com/ConnorY97/MiniJam16075a5388fb0496d683e6ebd28d3c87dd509de96be) | Adding BMG|
-|[15](https://github.com/ConnorY97/MiniJam160c4265616298914c7f53fc7be6499bbff67fa7724) | Added End sequence<br>The scary face will now rush the player|
-|[16](https://github.com/ConnorY97/MiniJam1608c2c81cd50257a938b8a07a101152cb135a1a176) | Adding banks to proj|
-|[17](https://github.com/ConnorY97/MiniJam1604b05d08c80753a1d430e0744b3085eadfef17a6a) | Adding Post Processing Components<br>Cannot get Post processing working again but I have added all the things we need if someone can figure it out.|
-|[18](https://github.com/ConnorY97/MiniJam160b801971470513f131cdfac07f573eee3579314d3) | Added running out of health lose condition|
-|[19](https://github.com/ConnorY97/MiniJam160c84113384af79b1a55191b1aa641b7e826bac0cb) | Got boids working to some extent.|
-|[20](https://github.com/ConnorY97/MiniJam160e5e3a2fa9d28e9fbfefe0f8174fd3d9cdbea44cc) | Fixed lighting issues with webgl, Fixed sword off screen, Moved bird down light to show the shadow, Made elements in the scene larger, Added black fog.|
-|[21](https://github.com/ConnorY97/MiniJam160fd227bedde6ca6e2af9c293b9e72fb8bbdfade98) | Fixed post processing|
-|[22](https://github.com/ConnorY97/MiniJam160d0582110f78f735aef50992cea4b7ba36ce94520) | Vignette now changes instead of 4 textures when in the dark.|
-|[23](https://github.com/ConnorY97/MiniJam16033e1a03fdf90181ce822a424bbb09cb91171fc48) | Improving game play loop|
-|[24](https://github.com/ConnorY97/MiniJam160f0af35868744141b0d364b59a952608207677492) | Merge branch 'main' of https://github.com/ConnorY97/MiniJam160|
-|[25](https://github.com/ConnorY97/MiniJam160e4b347b86e1cffae47d6c91274311166472ecaf0) | Made scary face faster.|
-|[26](https://github.com/ConnorY97/MiniJam1609aad9ae4edde992a391a9e9b0858c955b55b77b1) | Added environment and changed some lighting.|
-|[27](https://github.com/ConnorY97/MiniJam160ad9dae4f3d24bac7d3189ee5631703356129c9cb) | Added *dog*<br>Added an animated bear for the dogs rather than just having cubes moving around.|
-|[28](https://github.com/ConnorY97/MiniJam16013c311ff45815fd1eff9bd052a83e42e20e072e5) | Merge branch 'main' of https://github.com/ConnorY97/MiniJam160|
-|[29](https://github.com/ConnorY97/MiniJam1609e008f3b7f90145b3eabdde24b2fe592996fe172) | The player now lunges forward a little when attacking.|
-|[30](https://github.com/ConnorY97/MiniJam1604ded5795cdea0f9af2d30e997a867e0c072c2c94) | Added new player controller|
-|[31](https://github.com/ConnorY97/MiniJam160eb995ec72dc485ceca5c436a73f613b1bade6be0) | Sword collider is larger.|
-|[32](https://github.com/ConnorY97/MiniJam1600f45128dfe7bff2dd60faddfa8879203393ce721) | Fixed the *dog* model and collider.|
-|[33](https://github.com/ConnorY97/MiniJam1600b513466f13f684120df47530c0547093b1f9d72) | Adding some debugging and improved ending|
-|[34](https://github.com/ConnorY97/MiniJam16014201dc46c33fe49d4f779b9a5c1360a02798725) | Fixed some bird stuff.|
-|[35](https://github.com/ConnorY97/MiniJam160d045891e69117c785d13bb01b2cf8f4b191ddbb7) | Getting ready for final builds|
-|[36](https://github.com/ConnorY97/MiniJam160916fcd3a0404981966ed56ac0986fbfce4e0101f) | Added models for environment.|
-|[37](https://github.com/ConnorY97/MiniJam160a533ae9f3659261a76d9f3147774950cbb3c126d) | Fixing what I broke|
-|[38](https://github.com/ConnorY97/MiniJam160e18039603d29046280f9a779b3df52e5eb670304) | Cleaning up the Proj|
-|[39](https://github.com/ConnorY97/MiniJam160bf215da775e298ba3f2d78ca7413e71375b310d9) | Adding FMOD Proj|
+|[1](https://github.com/ConnorY97/MiniJam160/commit/551d4583bf52819943f29b1a06066f291ac9f3c3) | Initial commit|
+|[2](https://github.com/ConnorY97/MiniJam160/commit/20e10822a85b58b79c33600232045158f0b30982) | Adding Unity Proj|
+|[3](https://github.com/ConnorY97/MiniJam160/commit/52aceb2ac0161a73638c165971a61b74d4fa88d1) | Local Build|
+|[4](https://github.com/ConnorY97/MiniJam160/commit/29f088fc3aba59c620e0866d6832d66f3e7a0350) | Confirming WebGL Build|
+|[5](https://github.com/ConnorY97/MiniJam160/commit/9854836331a71f145a10b63f395f1a6cc5780fbe) | Create build.yml|
+|[6](https://github.com/ConnorY97/MiniJam160/commit/1ee4bc7716a974467bf7041814b6189a54e9252d) | Added basic game play elements<br>Done:<br>Super basic player movement<br>Basic bird movement and light<br>Basic evil dog movement, attack and light<br>Basic environmental lighting|
+|[7](https://github.com/ConnorY97/MiniJam160/commit/108619cdddec66e5538cf1bae686ab588324496e) | Improvements<br>Added:<br>Really bad camera controls<br>Health bar that decreases while you are out of light|
+|[8](https://github.com/ConnorY97/MiniJam160/commit/009b50345655226638c550abcb058659c4149251) | Dog spawning<br>Added the begging of spawning dogs in random positions. Fixed some errors.|
+|[9](https://github.com/ConnorY97/MiniJam160/commit/d1fb866140d8ba9c3ff4879a831907e0443e16bc) | Please someone fix the movement|
+|[10](https://github.com/ConnorY97/MiniJam160/commit/e5604a00e06e8bf28b89a435f83ea9f7fe5c9ed5) | Fixing build error|
+|[11](https://github.com/ConnorY97/MiniJam160/commit/421dc3a970b0d53c352eead5bf0aeac570801b46) | Fixed player movement & moved bird movement code to FixedUpdate too.|
+|[12](https://github.com/ConnorY97/MiniJam160/commit/ee90d6f91bb6ce5f5f1d276f91df540e98cb02e0) | Creating main game loop<br>Added:<br>Game loop<br>Better dog movement<br>Improved code independence<br>Imported some more stuff|
+|[13](https://github.com/ConnorY97/MiniJam160/commit/0487f2036214c5a4dc6cbb8dcc945ede8dc5b270) | Adding FMOD|
+|[14](https://github.com/ConnorY97/MiniJam160/commit/75a5388fb0496d683e6ebd28d3c87dd509de96be) | Adding BMG|
+|[15](https://github.com/ConnorY97/MiniJam160/commit/c4265616298914c7f53fc7be6499bbff67fa7724) | Added End sequence<br>The scary face will now rush the player|
+|[16](https://github.com/ConnorY97/MiniJam160/commit/8c2c81cd50257a938b8a07a101152cb135a1a176) | Adding banks to proj|
+|[17](https://github.com/ConnorY97/MiniJam160/commit/4b05d08c80753a1d430e0744b3085eadfef17a6a) | Adding Post Processing Components<br>Cannot get Post processing working again but I have added all the things we need if someone can figure it out.|
+|[18](https://github.com/ConnorY97/MiniJam160/commit/b801971470513f131cdfac07f573eee3579314d3) | Added running out of health lose condition|
+|[19](https://github.com/ConnorY97/MiniJam160/commit/c84113384af79b1a55191b1aa641b7e826bac0cb) | Got boids working to some extent.|
+|[20](https://github.com/ConnorY97/MiniJam160/commit/e5e3a2fa9d28e9fbfefe0f8174fd3d9cdbea44cc) | Fixed lighting issues with webgl, Fixed sword off screen, Moved bird down light to show the shadow, Made elements in the scene larger, Added black fog.|
+|[21](https://github.com/ConnorY97/MiniJam160/commit/fd227bedde6ca6e2af9c293b9e72fb8bbdfade98) | Fixed post processing|
+|[22](https://github.com/ConnorY97/MiniJam160/commit/d0582110f78f735aef50992cea4b7ba36ce94520) | Vignette now changes instead of 4 textues when in the dark.|
+|[23](https://github.com/ConnorY97/MiniJam160/commit/33e1a03fdf90181ce822a424bbb09cb91171fc48) | Improving gameplay loop|
+|[24](https://github.com/ConnorY97/MiniJam160/commit/f0af35868744141b0d364b59a952608207677492) | Merge branch 'main' of https://github.com/ConnorY97/MiniJam160|
+|[25](https://github.com/ConnorY97/MiniJam160/commit/e4b347b86e1cffae47d6c91274311166472ecaf0) | Made scary face faster.|
+|[26](https://github.com/ConnorY97/MiniJam160/commit/9aad9ae4edde992a391a9e9b0858c955b55b77b1) | Added enviroment and changed some lighting.|
+|[27](https://github.com/ConnorY97/MiniJam160/commit/ad9dae4f3d24bac7d3189ee5631703356129c9cb) | Added *dog*<br>Added an animated bear for the dogs rather than just having cubes moving around.|
+|[28](https://github.com/ConnorY97/MiniJam160/commit/13c311ff45815fd1eff9bd052a83e42e20e072e5) | Merge branch 'main' of https://github.com/ConnorY97/MiniJam160|
+|[29](https://github.com/ConnorY97/MiniJam160/commit/9e008f3b7f90145b3eabdde24b2fe592996fe172) | The player now lunges forward a little when attacking.|
+|[30](https://github.com/ConnorY97/MiniJam160/commit/4ded5795cdea0f9af2d30e997a867e0c072c2c94) | Added new player controller|
+|[31](https://github.com/ConnorY97/MiniJam160/commit/eb995ec72dc485ceca5c436a73f613b1bade6be0) | Sword collider is larger.|
+|[32](https://github.com/ConnorY97/MiniJam160/commit/0f45128dfe7bff2dd60faddfa8879203393ce721) | Fixed the *dog* model and collider.|
+|[33](https://github.com/ConnorY97/MiniJam160/commit/0b513466f13f684120df47530c0547093b1f9d72) | Adding some debugging and improved ending|
+|[34](https://github.com/ConnorY97/MiniJam160/commit/14201dc46c33fe49d4f779b9a5c1360a02798725) | Fixed some bird stuff.|
+|[35](https://github.com/ConnorY97/MiniJam160/commit/d045891e69117c785d13bb01b2cf8f4b191ddbb7) | Getting ready for final builds|
+|[36](https://github.com/ConnorY97/MiniJam160/commit/916fcd3a0404981966ed56ac0986fbfce4e0101f) | Added models for enviroment.|
+|[37](https://github.com/ConnorY97/MiniJam160/commit/a533ae9f3659261a76d9f3147774950cbb3c126d) | Fixing what I broke|
+|[38](https://github.com/ConnorY97/MiniJam160/commit/e18039603d29046280f9a779b3df52e5eb670304) | Cleaning up the Proj|
+|[39](https://github.com/ConnorY97/MiniJam160/commit/bf215da775e298ba3f2d78ca7413e71375b310d9) | Adding FMOD Proj|

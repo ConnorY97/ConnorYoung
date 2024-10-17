@@ -1,7 +1,10 @@
 ---
 Title: Setting up my first Switch
 date: 2024-08-25 18:00:00
-categories: [DevOps]
+categories: [DevOps, Hardware]
+image:
+    path: /assets/img/switch.png
+    alt: Switch
 ---
 ### Turning an Old Router into a Switch (and Accidentally Breaking My Home Internet)
 

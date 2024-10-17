@@ -1,7 +1,10 @@
 ---
 Title: Linux Build Machines
 date: 2024-09-01 09:00:00
-categories: [DevOps]
+categories: [DevOps, Hardware]
+image:
+    path: /assets/img/buildmachine.png
+    alt: Build Machines
 ---
 ### Fixing an HP Compaq 8100 Elite: From OS Installation to Self-Hosted GitHub Runner
 

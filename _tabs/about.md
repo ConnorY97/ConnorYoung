@@ -4,7 +4,7 @@ icon: fas fa-info-circle
 order: 1
 ---
 
-I am passionate about playing and making video games. Currently pursuing a career in Programming.
+I am passionate about playing and making video games. Currently working as a Junior programmer at FMOD by Firelight Technologies.
 
 ## Education
 - Completed a Diploma and Advanced Diploma of Professional Game Development at the [Academy of Entertainment](https://aie.edu.au/) (2019 - 2020)

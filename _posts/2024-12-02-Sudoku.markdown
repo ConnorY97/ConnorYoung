@@ -6,7 +6,7 @@ categories: [Portfolio, Kotlin]
 # Sudoku
 Creating my first Android app, I have only ever used engines to make Android apps before, e.g. Unity or Unreal. So I wanted to explore creating and Android app from the ground up using Android studio and Kotlin.
 
-As I have never worked with Kotlin before, I heaving replied on ChatGPT in the beginning to create the foundation of the app. As you can image this resulted in some rather poor coding practices. The first working version had a main script with a line count of `458`. Not on.
+As I have never worked with Kotlin before, I heavily relied on ChatGPT in the beginning to create the foundation of the app. As you can imagine this resulted in some rather poor coding practices. The first working version had a main script with a line count of `458`. Not on.
 
 ### Refactor no. 1
 Firstly I took all the functions out of the `MainActivity` class. As I was not sure how to access those functions for unit testing. However, as you can imagine this isn't great. But it did allow me to create some unit tests:

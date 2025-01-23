@@ -1,0 +1,72 @@
+---
+Title: Sudoku
+date: 2024-12-02 17:30:00
+categories: [Portfolio, Kotlin]
+---
+# Sudoku
+Creating my first Android app, I have only ever used engines to make Android apps before, e.g. Unity or Unreal. So I wanted to explore creating and Android app from the ground up using Android studio and Kotlin.
+
+As I have never worked with Kotlin before, I heaving replied on ChatGPT in the beginning to create the foundation of the app. As you can image this resulted in some rather poor coding practices. The first working version had a main script with a line count of `458`. Not on.
+
+### Refactor no. 1
+Firstly I took all the functions out of the `MainActivity` class. As I was not sure how to access those functions for unit testing. However, as you can imagine this isn't great. But it did allow me to create some unit tests:
+```
+@Test
+fun testCreatePuzzle_emptyCellsBasedOnDifficulty() {
+    val fullBoard = generateFullBoard()
+    val difficulty = "medium" // Mock difficulty
+    val puzzleBoard = createPuzzle(fullBoard, difficulty)
+
+    assertNotNull(puzzleBoard)
+
+    // Ensure puzzleBoard dimensions match
+    assertEquals(9, puzzleBoard.size)
+    assertTrue(puzzleBoard.all { it.size == 9 })
+
+    // Count empty cells based on difficulty
+    val emptyCount = puzzleBoard.sumBy { row -> row.count { it == 0 } }
+    assertTrue(emptyCount in 30..50) // Adjust ranges based on difficulty
+}
+```
+So it was simple to implement tests for the functions, but now I have global functions floating everywhere. Which will be fixed later.
+
+### Remote Builds and Testing
+I wanted a way to make builds remotely, so I made a build script to run on my [Build Machine](/_posts/2024-09-01-Linux-Build-Machines.markdown). First I had to figure out how to build an APK from CLI which in essence is simple:
+```
+./gradlew assembleDebug
+```
+However, there was a lot of permission wrangling that had to be managed:
+```
+- name: Update Perms
+shell: bash
+run: |
+    echo ${{ secrets.SUDO_PASS }} | sudo -S chmod -R 776 ../Sudoku
+
+- name: Setting Ownership
+shell: bash
+run: |
+    echo ${{ secrets.SUDO_PASS }} | sudo -S chown -R connor:connor ../Sudoku
+```
+Though it isn't really a great idea to be running sudo commands from a GitHub action. But we carry on.
+
+Once that was all figured out I was successfully building. The next hurdle was how I would get those builds. I have previously just uploaded artifacts to the action page. However, this puts the APK in a zip file and requires digging down into the actions to find the right build. So I found a nice solution. Using releases to more easily make the builds accessible. For example [Build v1.03](https://github.com/ConnorY97/Sudoku/releases/tag/v1.03), one of the earliest builds. I found an action which would allow me to create a release when I pushed a tag to the repo: [Action Github Release](https://github.com/softprops/action-gh-release). Which took a bit of figuring out but now works like a charm!
+
+Next was setting up the remote unit tests:
+```
+./gradlew test
+```
+Luckily since I had figured out how to wrangle the permissions for building it was a lot more straight forward and I got them up and running rather quickly and submitting the results to the action summary:
+![Test Results](/assets/img/testResults.png)
+Which is always satisfying to see running all green.
+
+### Features
+1. Loading screen: the loading screen displays boards and some of their stats: current timer and amount complete.
+![Loading Screen](/assets/img/load.png)
+2. Stats: general stats
+![Stats](/assets/img/stats.png)
+3. Menu: for better movement around the app
+![Menu](/assets/img/menu.png)
+
+These came in small increments and have all had massive improvements on the quality of life of the app.
+
+There are plans to add more features in the future.

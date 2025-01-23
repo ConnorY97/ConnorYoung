@@ -4,6 +4,9 @@ source "https://rubygems.org"
 
 gem "jekyll-theme-chirpy", "~> 6.2", ">= 6.2.3"
 
+# Add the csv gem to address Ruby 3.4.0's changes
+gem "csv"
+
 group :test do
   gem "html-proofer", "~> 4.4"
 end

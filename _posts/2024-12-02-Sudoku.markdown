@@ -31,7 +31,7 @@ fun testCreatePuzzle_emptyCellsBasedOnDifficulty() {
 So it was simple to implement tests for the functions, but now I have global functions floating everywhere. Which will be fixed later.
 
 ### Remote Builds and Testing
-I wanted a way to make builds remotely, so I made a build script to run on my [Build Machine](/_posts/2024-09-01-Linux-Build-Machines.markdown). First I had to figure out how to build an APK from CLI which in essence is simple:
+I wanted a way to make builds remotely, so I made a build script to run on my [Build Machine](/posts/Linux-Build-Machines). First I had to figure out how to build an APK from CLI which in essence is simple:
 ```
 ./gradlew assembleDebug
 ```

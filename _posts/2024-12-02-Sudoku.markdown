@@ -2,15 +2,17 @@
 Title: Sudoku
 date: 2024-12-02 17:30:00
 categories: [Portfolio, Kotlin]
+image:
+    path: /assets/img/sudokuboard.png
+    alt: Sudoku Board
 ---
-# Sudoku
 Creating my first Android app, I have only ever used engines to make Android apps before, e.g. Unity or Unreal. So I wanted to explore creating and Android app from the ground up using Android studio and Kotlin.
 
-As I have never worked with Kotlin before, I heavily relied on ChatGPT in the beginning to create the foundation of the app. As you can imagine this resulted in some rather poor coding practices. The first working version had a main script with a line count of `458`. Not on.
+As I have never worked with Kotlin before, I heavily relied on ChatGPT in the beginning to create the foundation of the app. As you can imagine this resulted in some rather poor coding practices. The first working version had a main script with a line count of `458`. The issue with this is refactoring can be time consuming and it is difficult to read the code.
 
 ### Refactor no. 1
 Firstly I took all the functions out of the `MainActivity` class. As I was not sure how to access those functions for unit testing. However, as you can imagine this isn't great. But it did allow me to create some unit tests:
-```
+``` Kotlin
 @Test
 fun testCreatePuzzle_emptyCellsBasedOnDifficulty() {
     val fullBoard = generateFullBoard()
@@ -30,13 +32,46 @@ fun testCreatePuzzle_emptyCellsBasedOnDifficulty() {
 ```
 So it was simple to implement tests for the functions, but now I have global functions floating everywhere. Which will be fixed later.
 
-### Remote Builds and Testing
-I wanted a way to make builds remotely, so I made a build script to run on my [Build Machine](/posts/Linux-Build-Machines). First I had to figure out how to build an APK from CLI which in essence is simple:
+### Refactor no. 2
+The second major change was extracting the main functions of the `MainActivity` class to individual classes: <br>
+**Before**
 ```
+my.sudoku.game
+├── HomeActivity.kt
+├── LoadActivity.kt
+├── MainActivity.kt
+└── SettingsActivity.kt
+```
+**After**
+```
+my.sudoku.game
+├── game
+│   ├── GameLogic.kt
+│   └── GameState.kt
+├── management
+│   └── GameManager.kt
+├── ui
+│   ├── theme
+│   ├── NumberGridManagement.kt
+│   └── SudokuGridManagement.kt
+├── viewmodel
+│   └── GameViewModel.kt
+├── HomeActivity.kt
+├── LoadActivity.kt
+├── MainActivity.kt
+├── SettingsActivity.kt
+└── StatsActivity.kt
+```
+The major improvement was readability and functionality. By decoupling functionality it allows for much faster development.
+
+### Remote Builds and Testing
+![Sudoku Build Action](/assets/img/sudokubildaction.png)
+I wanted a way to make builds remotely, so I made a build script to run on my [Build Machine](/posts/Linux-Build-Machines). First I had to figure out how to build an APK from CLI which in essence is simple:
+``` bash
 ./gradlew assembleDebug
 ```
 However, there was a lot of permission wrangling that had to be managed:
-```
+``` yml
 - name: Update Perms
 shell: bash
 run: |
@@ -49,10 +84,14 @@ run: |
 ```
 Though it isn't really a great idea to be running sudo commands from a GitHub action. But we carry on.
 
-Once that was all figured out I was successfully building. The next hurdle was how I would get those builds. I have previously just uploaded artifacts to the action page. However, this puts the APK in a zip file and requires digging down into the actions to find the right build. So I found a nice solution. Using releases to more easily make the builds accessible. For example [Build v1.03](https://github.com/ConnorY97/Sudoku/releases/tag/v1.03), one of the earliest builds. I found an action which would allow me to create a release when I pushed a tag to the repo: [Action Github Release](https://github.com/softprops/action-gh-release). Which took a bit of figuring out but now works like a charm!
+Once that was all figured out I was successfully building. The next hurdle was how I would get those builds. I have previously just uploaded artifacts to the action page. However, this puts the APK in a zip file and requires digging down into the actions to find the right build. So I found a nice solution. Using releases to more easily make the builds accessible. For example [Build v1.03](https://github.com/ConnorY97/Sudoku/releases/tag/v1.03),
+
+![Release No. 1](/assets/img/sudokurelease.png)
+
+one of the earliest builds. I found an action which would allow me to create a release when I pushed a tag to the repo: [Action Github Release](https://github.com/softprops/action-gh-release). Which took a bit of figuring out but now works like a charm!
 
 Next was setting up the remote unit tests:
-```
+``` bash
 ./gradlew test
 ```
 Luckily since I had figured out how to wrangle the permissions for building it was a lot more straight forward and I got them up and running rather quickly and submitting the results to the action summary:
@@ -66,6 +105,8 @@ Which is always satisfying to see running all green.
 ![Stats](/assets/img/stats.png)
 3. Menu: for better movement around the app
 ![Menu](/assets/img/menu.png)
+4. Number Grid: improved input of numbers to the sudoku grid by replacing the android keyboard with a number grid. This was a major quality of life improvement.
+![Number Grid](/assets/img/numbergrid.png)
 
 These came in small increments and have all had massive improvements on the quality of life of the app.
 

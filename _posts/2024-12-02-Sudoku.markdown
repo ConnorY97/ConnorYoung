@@ -99,13 +99,13 @@ Luckily since I had figured out how to wrangle the permissions for building it w
 Which is always satisfying to see running all green.
 
 ### Features
-1. Loading screen: the loading screen displays boards and some of their stats: current timer and amount complete.
+1. Loading screen: the loading screen displays boards and some of their stats: current timer and amount complete. <br>
 ![Loading Screen](/assets/img/load.png)
-2. Stats: general stats
+2. Stats: general stats <br>
 ![Stats](/assets/img/stats.png)
-3. Menu: for better movement around the app
+3. Menu: for better movement around the app <br>
 ![Menu](/assets/img/menu.png)
-4. Number Grid: improved input of numbers to the sudoku grid by replacing the android keyboard with a number grid. This was a major quality of life improvement.
+4. Number Grid: improved input of numbers to the sudoku grid by replacing the android keyboard with a number grid. This was a major quality of life improvement. <br>
 ![Number Grid](/assets/img/numbergrid.png)
 
 These came in small increments and have all had massive improvements on the quality of life of the app.

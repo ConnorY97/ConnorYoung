@@ -6,9 +6,6 @@ image:
     path: /assets/img/sudokuboard.png
     alt: Sudoku Board
 ---
-## Repository
-https://github.com/ConnorY97/Sudoku
-
 ## Description
 Creating my first Android app, I have only ever used engines to make Android apps before, e.g. Unity or Unreal. So I wanted to explore creating and Android app from the ground up using Android studio and Kotlin.
 
@@ -17,3 +14,6 @@ I also implemented a CI/CD pipeline with GitHub actions to sign and release buil
 ## Tech
 - Language: Kotlin
 - Engine: Android SDK
+
+## Repository
+https://github.com/ConnorY97/Sudoku

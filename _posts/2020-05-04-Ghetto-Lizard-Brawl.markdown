@@ -6,9 +6,6 @@ image:
     path: /assets/img/GLB.png
     alt: Ghetto Lizard Brawl
 ---
-## Repository
-https://github.com/ConnorY97/GhettoLizardBrawl
-
 ## Description
 I worked on a solo fighting game set in an underground lizard arena. My job was to make the enemy lizards smart. It was awesome learning how to use a finite state machine to control their behavior. I had to balance their aggression while making them look like they were picking their targets wisely to attack.
 
@@ -18,3 +15,6 @@ I worked on a solo fighting game set in an underground lizard arena. My job was 
 
 ## Trailer
 {% include embed/youtube.html id='1v4G0vy9g3I' %}
+
+## Repository
+https://github.com/ConnorY97/GhettoLizardBrawl

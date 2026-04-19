@@ -6,7 +6,6 @@ image:
     path: /assets/img/Ballz.png
     alt: Ballz
 ---
-## Description
 My attempt at making popular mobile game [Ballz](https://play.google.com/store/apps/details?id=com.ketchapp.ballz&hl=en&gl=US&pli=1).
 
 ## Tech
@@ -19,4 +18,4 @@ My attempt at making popular mobile game [Ballz](https://play.google.com/store/a
 </details>
 
 ## Repository
-https://github.com/ConnorY97/Ballz
+[GitHub](https://github.com/ConnorY97/Ballz)

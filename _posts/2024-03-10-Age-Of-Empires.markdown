@@ -5,6 +5,7 @@ categories: [Portfolio, C#]
 image:
     path: /assets/img/AOE.png
     alt: AOE
+published: false
 ---
 Working on creating a simple AOE clone!
 

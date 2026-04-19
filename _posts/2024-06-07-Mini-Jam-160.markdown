@@ -5,6 +5,7 @@ categories: [Portfolio, C#]
 image:
     path: /assets/img/DefendTheLight.png
     alt: DefendtheLight
+published: false
 ---
 # Our First Game Jam
 I participated in the [Itch.io Mini Jam 160](https://itch.io/jam/mini-jam-160-light) with [Alex](https://github.com/AlexMollard) and [Reyhan](https://github.com/Dyfust).

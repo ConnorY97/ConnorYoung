@@ -7,12 +7,11 @@ image:
     alt: Golem
 ---
 ## Description
-- Genre: Single player, adventure puzzler
-- Engine: Unity
-- Language: C#
-- Platform: Windows
-
 Golem is a relaxing, atmospheric puzzle game about a Golem. From a third-person perspective, you play as a rock golem who comes to life in an ancient Aztec ruin and must solve puzzles to find a way out, bringing life to the overgrown ruins as you explore. The game play revolves around the golem's ability to detach their head from their body, which unlocks a range of abilities – most interaction is done using the body, while most exploration is done using the head.
+
+## Tech
+- Language: C#
+- Engine: Unity
 
 ## Trailer
 {% include embed/youtube.html id='XGWC-r3y6kA' %}

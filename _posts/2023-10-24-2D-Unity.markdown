@@ -5,6 +5,7 @@ categories: [Portfolio, C#]
 image:
     path: /assets/img/unity.png
     alt: Unity
+published: false
 ---
 Practicing different forms of AI in a 2D Unity Environment.
 

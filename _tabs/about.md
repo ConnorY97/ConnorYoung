@@ -12,4 +12,5 @@ I am passionate about playing and making video games. Currently working as a Sup
 
 ## Experience:
 - Technical Director at Tumbleweed Games (Jan 2021 - May 2022)
-- Support Engineer at [FMOD](https://www.fmod.com/) (July 2022 - Present)
+- Support Engineer at [FMOD](https://www.fmod.com/) (July 2022 - July 2026)
+- Quality Assurance Manager at FMOD (July 2026 - Present)
